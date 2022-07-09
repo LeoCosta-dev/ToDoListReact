@@ -16,10 +16,10 @@ const CheckStyle = styled.div`
     }
 `
 
-export function Remove(){
+export function Remove({removeTask, task}){
     return(
         <CheckStyle>
-            <img src={remove} alt="check"/>
+            <img src={remove} alt="check" onClick={()=>removeTask(task)}/>
         </CheckStyle>
     )
 }

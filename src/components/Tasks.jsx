@@ -14,15 +14,13 @@ const TasksStyle = styled.div`
     padding: 10px;
     margin-top: -20px;
     height: 70%;
-
-
 `
 
-export function Tasks({tasks}){
+export function Tasks({tasks, removeTask}){
     return (
         <TasksStyle>
-            {tasks.map((item, index)=>(
-                <TaskElment key={index} newTask={item}/>
+            {tasks.map((item)=>(
+                <TaskElment newTask={item} removeTask={removeTask}/>
             ))}
         </TasksStyle>
     )

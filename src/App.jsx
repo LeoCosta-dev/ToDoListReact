@@ -9,10 +9,15 @@ function App() {
 
   const [tasks, setTasks] = useState([])
 
+  const removeTask = (key)=>{
+    const newList = tasks.filter(item=>item.id!=key)
+    setTasks(newList)
+    }
+
   return (
     <div className="App">
       <Header tasks={tasks} setTasks={setTasks}/>
-      <Tasks tasks={tasks}/>
+      <Tasks tasks={tasks} removeTask={removeTask}/>
       <Footer/>
     </div>
   )
