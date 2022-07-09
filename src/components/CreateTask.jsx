@@ -32,10 +32,15 @@ const CreateTaskStyle = styled.div`
 export function CreateTask({tasks, setTasks}){
 
     const[task, setTask] = useState()
+  
 
     function teste(){
-        setTasks([...tasks, task])
-        console.log(tasks)
+        
+        const newTask = {
+            id: tasks.length,
+            task: task
+        }
+        setTasks([...tasks, newTask])
     }
 
     return (

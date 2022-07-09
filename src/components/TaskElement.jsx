@@ -18,12 +18,13 @@ const TaskElementStyle = styled.div`
 
 
 `
-export function TaskElment(props){
+export function TaskElment({newTask, removeTask}){
+    const idTask = newTask.id
     return(
         <TaskElementStyle>
             <Check/>
-            <p>{props.newTask}</p>
-            <Remove/>
+            <p>{newTask.task}</p>
+            <Remove removeTask={removeTask} task={idTask}/>
         </TaskElementStyle>
     )
 }
