@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header tasks={tasks} setTasks={setTasks}/>
-      <Tasks/>
+      <Tasks tasks={tasks}/>
       <Footer/>
     </div>
   )
