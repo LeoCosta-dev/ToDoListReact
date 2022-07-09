@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const SearchStyle = styled.div`
+const TasksStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -23,11 +23,11 @@ const SearchStyle = styled.div`
     }
 `
 
-export function Search(){
+export function Tasks(){
     return (
-        <SearchStyle>
+        <TasksStyle>
             <input type="text" name="newTask" id="newTask" />
             <button>Create</button>
-        </SearchStyle>
+        </TasksStyle>
     )
 }

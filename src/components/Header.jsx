@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import backgroundHeader from "../assets/images/bg-desktop-dark.jpg"
-import { Search } from "./Search";
+import { Tasks } from "./Tasks";
 import { Title } from "./Title";
 
 const HeaderStyle = styled.header`
@@ -18,6 +18,6 @@ export function Header(){
     return(
     <HeaderStyle>
         <Title/>
-        <Search/>
+        <Tasks/>
     </HeaderStyle>)
 }
