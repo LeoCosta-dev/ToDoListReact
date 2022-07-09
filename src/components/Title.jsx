@@ -5,8 +5,8 @@ import sun from "../assets/images/icon-sun.svg"
 const TitleStyle = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    width: 40%;
+    align-items: center;
+    width: 70%;
     height: 50%;
 
     h1{

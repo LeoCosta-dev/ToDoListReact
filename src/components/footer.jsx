@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterStyle = styled.footer`
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
 `
 
 const year = new Date().toISOString().split("-")[0]
