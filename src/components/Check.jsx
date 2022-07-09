@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import check from "../assets/images/icon-check.svg"
 
@@ -9,6 +9,7 @@ const CheckStyle = styled.div`
         height: 40px;
         width: 40px;
         border-radius: 200px;
+        background-color: ${({done})=>done?'#008000':'none'};
     }
 
     img:hover{
@@ -17,9 +18,11 @@ const CheckStyle = styled.div`
 `
 
 export function Check(){
+    const [done, setDone] = useState(false)
+
     return(
-        <CheckStyle>
-            <img src={check} alt="check" id="check"/>
+        <CheckStyle done={done}>
+            <img src={check} alt="check" onClick={()=>setDone(done?false:true)}/>
         </CheckStyle>
     )
 }
