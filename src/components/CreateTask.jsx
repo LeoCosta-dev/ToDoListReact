@@ -17,7 +17,8 @@ const CreateTaskStyle = styled.div`
     }
     input{
         width: 68%;
-        height: 97%;
+        height: 60%;
+        padding: 10px;
     }
     button{
         width: 28%;
@@ -35,12 +36,13 @@ export function CreateTask({tasks, setTasks}){
   
 
     function teste(){
-        
-        const newTask = {
-            id: tasks.length,
-            task: task
+        if(task){
+            const newTask = {
+                id: tasks.length,
+                task: task
+            }
+            setTasks([...tasks, newTask])
         }
-        setTasks([...tasks, newTask])
     }
 
     return (
