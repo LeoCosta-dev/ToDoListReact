@@ -15,10 +15,10 @@ const HeaderStyle = styled.header`
     justify-content: center;
 `
 
-export function Header(){
+export function Header({ tasks, setTasks}){
     return(
     <HeaderStyle>
         <Title/>
-        <CreateTask/>
+        <CreateTask tasks={tasks} setTasks={setTasks}/>
     </HeaderStyle>)
 }

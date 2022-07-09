@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+
 
 const CreateTaskStyle = styled.div`
     display: flex;
@@ -28,11 +29,23 @@ const CreateTaskStyle = styled.div`
     }
 `
 
-export function CreateTask(){
+export function CreateTask({tasks, setTasks}){
+
+    const[task, setTask] = useState()
+
+    function teste(){
+        setTasks([...tasks, task])
+        console.log(tasks)
+    }
+
     return (
         <CreateTaskStyle>
-            <input type="text" name="newTask" id="newTask" />
-            <button>Create Task</button>
+            <input 
+                type="text" 
+                name="newTask" 
+                onChange={(e)=>setTask(e.target.value)}
+                />
+            <button onClick={teste}>Create Task</button>
         </CreateTaskStyle>
     )
 }
