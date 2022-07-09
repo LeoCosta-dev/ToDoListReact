@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import backgroundHeader from "../assets/images/bg-desktop-dark.jpg"
+import { CreateTask } from "./CreateTask";
 import { Title } from "./Title";
 
 const HeaderStyle = styled.header`
@@ -18,5 +19,6 @@ export function Header(){
     return(
     <HeaderStyle>
         <Title/>
+        <CreateTask/>
     </HeaderStyle>)
 }

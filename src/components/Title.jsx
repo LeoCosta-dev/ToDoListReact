@@ -6,11 +6,15 @@ const TitleStyle = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 40%;
     height: 50%;
+    cursor: default;
 
     h1{
         margin-bottom: 0;
+    }
+    img{
+        cursor: pointer;
     }
 `
 export function Title(){
