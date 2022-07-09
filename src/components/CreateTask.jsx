@@ -28,6 +28,10 @@ const CreateTaskStyle = styled.div`
     button:hover, input:hover{
         border: 1px solid rgb(238, 237, 238); 
     }
+
+    @media (max-width: 800px){
+        width: 90%;
+    }
 `
 
 export function CreateTask({tasks, setTasks}){

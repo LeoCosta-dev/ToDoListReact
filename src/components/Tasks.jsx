@@ -14,6 +14,10 @@ const TasksStyle = styled.div`
     padding: 10px;
     margin-top: -20px;
     height: 70%;
+
+    @media (max-width: 800px){
+        width: 90%;
+    }
 `
 
 export function Tasks({tasks, removeTask}){
