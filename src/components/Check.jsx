@@ -12,9 +12,6 @@ const CheckStyle = styled.div`
         background-color: ${({done})=>done?'#008000':'none'};
     }
 
-    img:hover{
-        background-color: #008000;
-    }
 `
 
 export function Check(){
